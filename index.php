@@ -63,7 +63,7 @@ if ( isset($_GET['kategori']) && !empty($_GET['kategori']) )
 if ( isset($_GET['producent']) && !empty($_GET['producent']) )
 {
 	// Brug funktionen array_map(), til at køre funktionen intval på hver værdi i array, så vi er sikker på hver værdi er et tal og dermed sikrer imod SQL injections.
-	$kategori = array_map('intval', $_GET['kategori']);
+	$producent = array_map('intval', $_GET['producent']);
 
 	// Alternativ løsning, er at løbe igennem værdier med en foreach-løkke og brug intval på hver værdi i løkken og tilføje til et array, for på den måde at være sikker på det array kun indeholder tal. Løsningen er udkommenteret, da den er en smule tungere end array_map() og det er mere kode at skrive.
 	// $producent = [];
